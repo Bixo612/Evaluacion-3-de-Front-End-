@@ -17,7 +17,7 @@
             <a class="navbar-brand" href="#">
                 <img src="img/logo.png" alt="" width="30" height="30">
             </a>
-            <a class="navbar-brand" href="#" >Car Service Garage</a>
+            <a class="navbar-brand" href="#">Car Service Garage</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,34 +62,52 @@
                 <input type="text" class="form-control" name="txt_telefono" id="txt_telefono"
                     placeholder="+569 1234 4567" required>
                 <!---->
-                <label for="txt_patente">Patente</label>
-                <input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB-12-34" required>
+                <label for="txt_ru">Rut</label>
+                <input type="text" class="form-control" name="txt_ru" id="txt_ru" placeholder="XX XXX XXX - X" required>
                 <!---->
                 <div class="row">
                     <div class="col">
                         <label for="date_dia_solicitado">Fecha</label>
-                        <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado" required>
+                        <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado"
+                            required>
                     </div>
                     <!---->
                     <div class="col">
                         <label for="date_hora_solicitada">Dia</label>
-                        <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada" required>
+                        <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada"
+                            required>
                     </div>
                 </div>
+                <!--
                 <div id="fehca_help" class="form-text">
                     Cita sujeta a confirmacion por correo o teléfono
                 </div>
+                -->
                 <!---->
-                <label for="select_tipo">Tipo de vehiculo</label>
+                <label for="select_tipo">Tipo de bateria</label>
                 <select class="form-select" name="select_tipo" id="select_tipo">
                     <option selected disabled value="0">Selecione tipo</option>
-                    <option value="1">Sedan</option>
-                    <option value="2">Compacto</option>
-                    <option value="3">Suv/Pick Up</option>
+                    <option value="1">Bateria Jazz</option>
+                    <option value="2">Bateria Pop</option>
+                    <option value="3">Bateria Metal</option>
+                    <option value="3">Bateria Rock</option>
                 </select>
                 <!---->
+                <div class="row">
+                    <div class="col">
+                        <label for="num_micrfonos">Cantidad de microfonos</label>
+                        <input type="number" class="form-control" name="num_micrfonos" id="num_micrfonos"
+                            required>
+                    </div>
+                    <!---->
+                    <div class="col">
+                        <label for="num_amplificadores">Cantidad de amplificadores</label>
+                        <input type="number" class="form-control" name="num_amplificadores" id="num_amplificadores"
+                            required>
+                    </div>
+                </div>
+                <!---->
                 <label>Servicios</label><br>
-
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="diagnostico" id="checkbox_diagnostico">
                     <label class="form-check-label" for="checkbox_diagnostico">Diagnostico
@@ -160,11 +178,11 @@
                     <l1 class="list-group-item">Casa matriz: Av. Quilín 2854</l1>
                 </div>
                 <div class="col-sm-12 col-md-3">
-                    <iframe width="200" height="100" src="https://www.youtube.com/embed/YwsvW4fLkJc"
+                    <iframe width="200" height="100" src="https://www.youtube.com/embed/YtLlUS-Hq5Q"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                    <iframe width="200" height="100" src="https://www.youtube.com/embed/cFB69J3LirI"
+                    <iframe width="200" height="100" src="https://www.youtube.com/embed/rT6bDmkOs7g"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -176,7 +194,7 @@
         <br>
     </footer>
 
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

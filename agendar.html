@@ -50,31 +50,35 @@
     <!--Fin nav-->
     <div class="container">
         <h2>Agenda tu hora</h2>
-        <form action="formulario.php" method="post" class="row g-3">
+        <form action="#" method="post" name="formulario" id="formulario" class="row g-3">
             <div class="col-sm-12 col-md-6">
                 <label for="txt_nombre">Nombre completo</label>
-                <input type="text" class="form-control" name="txt_nombre" id="txt_nombre" required>
+                <input type="text" class="form-control" name="txt_nombre" id="txt_nombre"  placeholder="Ingrese su o sus nombres">
                 <!---->
                 <label for="txt_correo">Correo electronico</label>
                 <input type="email" class="form-control" name="txt_correo" id="txt_correo"
-                    placeholder="sucorreo@dominio.com" required>
+                    placeholder="sucorreo@dominio.com"  >
                 <!---->
                 <label for="txt_telefono">Telefono</label>
                 <input type="text" class="form-control" name="txt_telefono" id="txt_telefono"
-                    placeholder="+569 1234 4567" required>
+                    placeholder="+569 1234 4567" >
+                <!---->
+                <label for="txt_rut">Rut</label>
+                <input type="text" class="form-control" name="txt_rut" id="txt_rut"
+                    placeholder="XXXXXXXX-X" >
                 <!---->
                 <label for="txt_patente">Patente</label>
-                <input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB-12-34" required>
+                <input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB-12-34" >
                 <!---->
                 <div class="row">
                     <div class="col">
                         <label for="date_dia_solicitado">Fecha</label>
-                        <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado" required>
+                        <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado" >
                     </div>
                     <!---->
                     <div class="col">
                         <label for="date_hora_solicitada">Dia</label>
-                        <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada" required>
+                        <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada" >
                     </div>
                 </div>
                 <div id="fehca_help" class="form-text">
@@ -84,32 +88,32 @@
                 <label for="select_tipo">Tipo de vehiculo</label>
                 <select class="form-select" name="select_tipo" id="select_tipo">
                     <option selected disabled value="0">Selecione tipo</option>
-                    <option value="1">Sedan</option>
-                    <option value="2">Compacto</option>
-                    <option value="3">Suv/Pick Up</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Compacto">Compacto</option>
+                    <option value="Suv/Pick Up">Suv/Pick Up</option>
                 </select>
                 <!---->
                 <label>Servicios</label><br>
 
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="diagnostico" id="checkbox_diagnostico">
-                    <label class="form-check-label" for="checkbox_diagnostico">Diagnostico
+                    <label class="form-check-label" for="Diagnostico">Diagnostico
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="filtros-acite" id="checkbox_filtros">
+                    <input class="form-check-input" type="checkbox" value="Cambio de filtros y aceite" id="checkbox_filtros">
                     <label class="form-check-label" for="checkbox_filtros">
                         Cambio de filtros y aceite
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="frenos" id="checkbox_frenos">
+                    <input class="form-check-input" type="checkbox" value="Mantencion frenos" id="checkbox_frenos">
                     <label class="form-check-label" for="checkbox_frenos">
                         Mantencion frenos
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="direccion-suspension"
+                    <input class="form-check-input" type="checkbox" value="direccion y suspension"
                         id="checkbox_direcion_suspension">
                     <label class="form-check-label" for="checkbox_direcion_suspension">
                         Mantencion direccion y suspension
@@ -117,17 +121,17 @@
                 </div>
                 <!---->
                 <label>Servicio de retiro y entrega a domicilio</label><br>
-                <input type="radio" class="form-check-input" name="rbt_domiclio_si" id="rbt_domiclio_si" value="si">
-                <label for="rbt_domiclio_si">Si</label>
-                <input type="radio" class="form-check-input" name="rbt_domiclio_no" id="rbt_domiclio_no" value="no">
-                <label for="rbt_domiclio_no">No</label><br>
+                <input type="radio" class="form-check-input" name="rbt_domiclio" id="rbt_domiclio" value="Si">
+                <label for="rbt_domiclio">Si</label>
+                <input type="radio" class="form-check-input" name="rbt_domiclio" id="rbt_domiclio" value="No" checked>
+                <label for="rbt_domiclio" >No</label><br>
                 <!---->
                 <label for="txt_observaciones">Observaciones</label>
-                <textarea class="form-control" name="txt_observaciones" id="txt_observaciones" rows="6"></textarea>
+                <textarea class="form-control" name="txt_observaciones" id="txt_observaciones" rows="6" placeholder="Dejanos un comentario"></textarea>
                 <!---->
                 <br>
                 <div class="col">
-                    <button type="submit" class="btn btn-success">Confirmar solicitud</button>
+                    <button type="button" class="btn btn-success" onclick="javascript:void(validar())">Confirmar solicitud</button>
                     <button type="reset" class="btn btn-danger">Limpiar formulario</button>
                 </div>
             </div>

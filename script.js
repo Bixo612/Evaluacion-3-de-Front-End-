@@ -10,11 +10,6 @@ function validar() {
     let dia = document.formulario.date_dia_solicitado.value;
     let hora = document.formulario.date_hora_solicitada.value;
     //
-    if (tipo == 0) {
-        alert("Debe selcionar un modelo")
-        document.formulario.select_tipo.focus();
-        return false;
-    }
     if (nombre.length <= 0) {
         alert("Debe ingresar un nombre")
         document.formulario.txt_nombre.focus();
@@ -23,26 +18,6 @@ function validar() {
     if (correo.length <= 0) {
         alert("Debe ingresar un correo")
         document.formulario.txt_correo.focus();
-        return false;
-    }
-    if (patente.length <= 0 || patente.length > 6) {
-        alert("Debe ingresar una patente de 6 caracteres")
-        document.formulario.txt_patente.focus();
-        return false;
-    }
-    if (rut.length < 9 || rut.length > 10) {
-        alert("El largo del rut debe ser entre 9 y 10 caracteres")
-        document.formulario.txt_rut.focus();
-        return false;
-    }
-    if (rut.indexOf(".") > -1) {
-        alert("El rut no debe contener puntos")
-        document.formulario.txt_rut.focus();
-        return false;
-    }
-    if (rut.lastIndexOf("-") < 0) {
-        alert("El rut debe llevar guion")
-        document.formulario.txt_rut.focus();
         return false;
     }
     if (isNaN(telefono)) {
@@ -65,10 +40,44 @@ function validar() {
         document.formulario.txt_telefono.focus();
         return false;
     }
-    alert(  "Datos registrados \n" + 
-            "Nombre:" + nombre + " Correo: " + correo + "\n" +
-            "Rut: " + rut + " Telefono: " + telefono + " Retiro a domicilio: "+ retiro  + "\n"+
-            "Patente: " + patente + " Tipo: " + tipo +"\n" +     
-            dia+" "+hora+ "\n")
+    if (rut.length < 9 || rut.length > 10) {
+        alert("El largo del rut debe ser entre 9 y 10 caracteres")
+        document.formulario.txt_rut.focus();
+        return false;
+    }
+    if (rut.indexOf(".") > -1) {
+        alert("El rut no debe contener puntos")
+        document.formulario.txt_rut.focus();
+        return false;
+    }
+    if (rut.lastIndexOf("-") < 0) {
+        alert("El rut debe llevar guion")
+        document.formulario.txt_rut.focus();
+        return false;
+    }
+    if (patente.lengt == "") {
+        alert("Debe ingresar una patente")
+        document.formulario.txt_patente.focus();
+        return false;
+    }
+    if (dia == "") {
+        alert("Debe ingresar una fecha")
+        document.formulario.date_dia_solicitado.focus();
+        return false;
+    }
+    if (hora == "") {
+        alert("Debe ingresar una hora")
+        document.formulario.date_hora_solicitada.focus();
+        return false;
+    }
+    if (tipo == 0) {
+        alert("Debe selcionar un modelo")
+        document.formulario.select_tipo.focus();
+        return false;
+    }
+    alert("Datos registrados \n" +
+        "Nombre: " + nombre + " Correo: " + correo + " Rut: " + rut + "\n" +
+        "Telefono: " + telefono + " Retiro a domicilio: " + retiro + " Patente: " + patente + "\n" +
+        "Tipo: " + tipo + " Dia: " + dia + " Hora: " + hora + "\n")
 
 }    

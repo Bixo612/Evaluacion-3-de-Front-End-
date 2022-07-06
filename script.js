@@ -55,8 +55,8 @@ function validar() {
         document.formulario.txt_rut.focus();
         return false;
     }
-    if (patente.lengt == "") {
-        alert("Debe ingresar una patente")
+    if (patente.length <= 0 || patente.length > 6) {
+        alert("Debe ingresar una patente, maximo 6 caracteres")
         document.formulario.txt_patente.focus();
         return false;
     }
